@@ -4,7 +4,8 @@ My little Queue
 from typing import Any
 
 
-my_gueue = []
+my_gueue = [] #конец справа
+
 
 def enqueue(elem: Any) -> None:
     """
@@ -15,7 +16,7 @@ def enqueue(elem: Any) -> None:
     """
 
     my_gueue.append(elem)
-    print(elem)
+    #print(elem)
     return None
 
 
@@ -25,7 +26,8 @@ def dequeue() -> Any:
 
     :return: dequeued element
     """
-    return None
+
+    return my_gueue.pop(0) if my_gueue else None
 
 
 def peek(ind: int = 0) -> Any:
@@ -35,6 +37,7 @@ def peek(ind: int = 0) -> Any:
     :param ind: index of element (count from the beginning)
     :return: peeked element
     """
+
     print(ind)
     return None
 
@@ -45,6 +48,17 @@ def clear() -> None:
 
     :return: None
     """
+
+    my_gueue.clear()
     return None
+
+
 if __name__ == '__main__':
     enqueue("aerfg")
+    enqueue(25)
+    print(my_gueue)
+    dequeue()
+    print(my_gueue)
+    clear()
+    print(my_gueue)
+
