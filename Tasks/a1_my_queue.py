@@ -38,9 +38,8 @@ def peek(ind: int = 0) -> Any:
     :return: peeked element
     """
 
-
     print(ind)
-    return None
+    return None if ind >= len(my_gueue) else my_gueue[ind]
 
 
 def clear() -> None:
@@ -57,9 +56,15 @@ def clear() -> None:
 if __name__ == '__main__':
     enqueue("aerfg")
     enqueue(25)
-    print(my_gueue)
-    dequeue()
-    print(my_gueue)
     clear()
     print(my_gueue)
+    dequeue()
+    enqueue(256)
+    print(my_gueue)
+    enqueue(236)
+    print(my_gueue)
+    print(peek(0))
+    print(my_gueue)
+
+
 
