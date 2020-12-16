@@ -45,6 +45,8 @@ def clear() -> None:
 
     :return: None
     """
+
+    my_stack.clear()
     return None
 
 
@@ -53,4 +55,7 @@ if __name__ == '__main__':
     push(1)
     print(my_stack)
     push(2)
+    print(my_stack)
+    clear()
+    push(22)
     print(my_stack)
