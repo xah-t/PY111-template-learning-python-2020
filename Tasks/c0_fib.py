@@ -22,5 +22,9 @@ def fib_iterative(n: int) -> int:
     :param n: number of item
     :return: Fibonacci number
     """
-    print(n)
-    return 0
+
+
+    n, b = 0, 1
+    for i in range(0, n):
+        a, b = b, a + b
+    return a
