@@ -5,14 +5,14 @@ def fib_recursive(n: int) -> int:
     :param n: number of item
     :return: Fibonacci number
     """
+    if n < 0:
+        raise ValueError()
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
 
-
-    def fib(n):
-        return foo(n - 1) + foo(n - 2)
-
-
-    print(n)
-    return 0
+    return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 
 def fib_iterative(n: int) -> int:
