@@ -17,14 +17,14 @@ def binary_search(elem: int, arr: Sequence) -> Optional[int]:
 
         mid = (right_side + left_side)//2
         if arr[mid] == elem:
+            while arr[mid] == arr[mid-1]:
+                mid -= 1
             return mid
-        elif arr[mid] <= elem:
+        elif arr[mid] < elem:
             left_side = mid + 1
         else:
             right_side = mid - 1
     arr = arr[left_side:right_side]
-#    while arr[i] != arr[i-1]:
-#        arr[i] -= 1
-#    return i
+
     print(elem, arr)
     return None
