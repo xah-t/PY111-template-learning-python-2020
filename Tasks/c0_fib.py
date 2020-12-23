@@ -5,6 +5,12 @@ def fib_recursive(n: int) -> int:
     :param n: number of item
     :return: Fibonacci number
     """
+
+
+    def fib(n):
+        return foo(n - 1) + foo(n - 2)
+
+
     print(n)
     return 0
 
